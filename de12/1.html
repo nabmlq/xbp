@@ -3,43 +3,294 @@
 <head>
     <!-- ⑥↓タイトルを変えてみよう -->
     <title>みくのテストページ</title>
-    <!-- ⑤スタイルシートの設定をしよう -->
-    <!-- h1.htmlからある行をコピペしてくればOK -->
-</head>
+    <!--<link rel="
+="./css/style.css">-->
+
+</head>    
+
+ <style>
+    body {
+      background-color: #19365C;
+      color: #F0F7FC;
+      font-family: sans-serif;
+    }
+
+  
+  </style>
+  <header>
+  <p>WEB BASICS</p>
+  <h1>Git & HTML</h1>
+  <p>Web制作を支える2つの基本</p>
+</header>
+<nav>
+    <a href="#about">はじめに</a>
+    <a href="#git">Git</a>
+    <a href="#html">HTML</a>
+    <a href="#summary">まとめ</a>
+  </nav>
+   <main>
+
+    <section class="card" id="about">
+      <h2>01. はじめに</h2>
+      <p>
+        Webサイトを作ったり、プログラムを開発したりするときには、
+        さまざまな技術が使われています。
+        今回は、その中でも基本となる
+        <span class="keyword">Git</span> と
+        <span class="keyword">HTML</span> について調べました。
+      </p>
+      <p>
+        Gitはファイルの変更を管理するための仕組みで、
+        HTMLはWebページの構造を作るための言語です。
+        役割は違いますが、どちらもWeb制作を支える大切な技術です。
+      </p>
+    </section>
+     <section class="card" id="git">
+      <h2>02. Gitとは？</h2>
+
+      <p>
+        Git（ギット）とは、ファイルの変更履歴を記録し、
+        管理するためのバージョン管理システムです。
+        主にプログラムの開発で使われています。
+      </p>
+
+      <h3>なぜGitが必要なのか</h3>
+      <p>
+        例えば、レポートやWebサイトを何度も修正すると、
+        「最新版」「最新版2」「本当の最新版」のように
+        ファイルが増えてしまうことがあります。
+        Gitを使うと、変更を記録しておけるため、
+        過去の状態を確認しやすくなります。
+      </p>
+
+      <h3>Gitの仕組み</h3>
+      <div class="diagram">
+        <div class="step">① ファイルを作る</div>
+        <div class="arrow">→</div>
+        <div class="step">② 変更を記録する</div>
+        <div class="arrow">→</div>
+        <div class="step">③ 履歴を確認する</div>
+      </div>
+
+      <p>
+        変更を記録しておけば、いつ、どのような変更をしたのかを
+        振り返ることができます。必要に応じて過去の状態を
+        参考にしたり、以前の状態に戻したりすることもできます。
+      </p>
+
+      <h3>Gitでできること</h3>
+      <ul>
+        <li>ファイルの変更履歴を記録する</li>
+        <li>以前のバージョンと比較する</li>
+        <li>問題が起きたときに過去の状態を確認する</li>
+        <li>複数人で開発するときに変更を共有する</li>
+      </ul>
+
+      <h3>GitとGitHubの違い</h3>
+      <table>
+        <tr>
+          <th>名前</th>
+          <th>役割</th>
+        </tr>
+        <tr>
+          <td>Git</td>
+          <td>ファイルの変更履歴を管理する仕組み</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>Gitで管理したデータを保存・共有し、共同開発を助けるサービス</td>
+        </tr>
+      </table>
+
+      <div class="summary">
+        <strong>自分なりの理解：</strong>
+        Gitは、ファイルの「変更の記録を残せるノート」のようなものだと考えました。
+        間違いに気づいたときや、複数人で作業するときに役立つ仕組みです。
+      </div>
+    </section>
+
+    <section class="card" id="html">
+      <h2>03. HTMLとは？</h2>
+
+      <p>
+        HTMLは「HyperText Markup Language」の略で、
+        Webページの構造や内容を作るためのマークアップ言語です。
+        見出し、文章、画像、リンクなどを指定するときに使います。
+      </p>
+
+      <h3>タグ・要素・属性の違い</h3>
+      <ul>
+        <li><strong>タグ：</strong>内容を囲んだり、要素の種類を示したりする記号</li>
+        <li><strong>要素：</strong>タグとその中の内容などを合わせたまとまり</li>
+        <li><strong>属性：</strong>要素に追加情報を設定するもの</li>
+      </ul>
+
+      <h3>例① 文章を表示する</h3>
+      <pre><code>&lt;p&gt;こんにちは！&lt;/p&gt;</code></pre>
+
+      <div class="result">
+        <strong>ブラウザでの表示例：</strong>
+        <p>こんにちは！</p>
+      </div>
+
+      <p>
+        <code>&lt;p&gt;</code> は文章の段落を表すタグです。
+        開始タグと終了タグで文章を囲むことで、段落として扱われます。
+      </p>
+
+      <h3>例② リンクを作る</h3>
+      <pre><code>&lt;a href="https://www.google.com"&gt;
+  Googleへのリンク
+&lt;/a&gt;</code></pre>
+
+      <div class="result">
+        <strong>ブラウザでの表示例：</strong>
+        <p>
+          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+            Googleへのリンク
+          </a>
+        </p>
+      </div>
+
+      <p>
+        <code>&lt;a&gt;</code> はリンクを作るタグです。
+        <code>href</code> 属性にリンク先のURLを指定します。
+      </p>
+
+      <h3>よく使うHTMLタグ</h3>
+      <table>
+        <tr>
+          <th>タグ</th>
+          <th>役割</th>
+        </tr>
+        <tr>
+          <td><code>&lt;h1&gt;</code></td>
+          <td>大きな見出し</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;</code></td>
+          <td>文章の段落</td>
+        </tr>
+        <tr>
+          <td><code>&lt;a&gt;</code></td>
+          <td>リンク</td>
+        </tr>
+        <tr>
+          <td><code>&lt;img&gt;</code></td>
+          <td>画像</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul&gt;</code> と <code>&lt;li&gt;</code></td>
+          <td>箇条書きのリスト</td>
+        </tr>
+        <tr>
+          <td><code>&lt;table&gt;</code></td>
+          <td>表</td>
+        </tr>
+      </table>
+
+      <h3>HTMLとCSSの関係</h3>
+      <p>
+        HTMLがWebページの構造を作るのに対して、
+        CSSは文字の色や背景、配置などのデザインを整えます。
+        このページも、HTMLで内容を作り、CSSで水色と紺色を使った
+        デザインにしています。
+      </p>
+
+      <div class="summary">
+        <strong>自分なりの理解：</strong>
+        HTMLはWebページの骨組み、CSSはその見た目を整えるものだと考えました。
+        役割を分けることで、内容とデザインを整理しやすくなります。
+      </div>
+    </section>
+
+    <section class="card" id="summary">
+      <h2>04. まとめ・学んだこと</h2>
+
+      <div class="summary">
+        <p><strong>Git：</strong>ファイルの変更履歴を記録・管理する。</p>
+        <p><strong>HTML：</strong>Webページの構造や内容を作る。</p>
+        <p><strong>CSS：</strong>Webページの見た目を整える。</p>
+      </div>
+
+      <p>
+        今回調べてみて、普段見ているWebサイトも、
+        文章や画像を並べるだけでなく、HTMLで構造を作り、
+        CSSでデザインを整えていることが分かりました。
+        また、Gitを使うと変更履歴を残せるため、
+        Web制作を安全に進めたり、チームで協力したりしやすくなると理解しました。
+      </p>
+    </section>
+
+    <section class="card source">
+      <h2>05. 参考にしたサイト</h2>
+      <ul>
+        <li>
+          <a href="https://git-scm.com/book/ja/v2" target="_blank" rel="noopener noreferrer">
+            Pro Git 日本語版
+          </a>
+          <p>Gitの基本的な仕組みや使い方を調べるための参考資料。</p>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener noreferrer">
+            MDN Web Docs：HTMLでコンテンツを構造化する
+          </a>
+          <p>HTMLの基本的な要素やWebページの構造について学べる資料。</p>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noopener noreferrer">
+            MDN Web Docs：CSSの基本
+          </a>
+          <p>Webページの色や見た目を整えるCSSについて学べる資料。</p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    WEB BASICS | Git & HTML
+  </footer>
+
+</body>
+</html>
+
 <body>
-    <h1>Gitについて</h1>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
     <div>
-         <!-- ①↓に文字を書いてみよう -->
-★gitとは
+         <!-- ①↓に文字 nav { }を書いてみよう -->
+★<b>Git</b>とは
 
-webサイトを製作する中で、変更したデータを保存するシステムのこと
+<p>webサイトを製作する中で、変更したデータを保存するシステムのこと<p>
+
 
 <p>・Go liveで変更保存し、コミットを押すとネット上にも反映される<p>
 
 
 
 
-<p>★HTMLとは<p>
+<p>★<b>HTML</b>とは</p>
 
 webページを作るための言語
 
-<p>書き方の基本一覧<p>
-<hl>大きな見出し
-<p>段落
+<p>書き方の基本一覧</p>
+hl  大きな見出し
+<p>p   段落</p>
 
 
 
-12345678
-いいいいいいいい<br>
+<br>
 
          <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
 git<br>
-                    <img src="images/testimage.png" width="30%"><br>
+                     画像を表示(30%)<br>
+                    <img src="./images/testimage.png" width="30%"><br>
                     画像を表示(40%)<br>
-                    <img src="images/testimage.png" width="40%"><br>
+                    <img src="./images/testimage.png" width="40%"><br>
+                    <img src=""
                 
-         <!-- ③↓に箇条書きをしてみよう -->
+
+          書きをしてみよう -->
  <ol>
                         <li>ああああああ</li>
                         <li>いいいいいい</li>
