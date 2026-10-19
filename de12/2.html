@@ -7,31 +7,149 @@
     <!-- h1.htmlからある行をコピペしてくればOK -->
 </head>
 <body>
-    <h1>Street Observasion</h1>
+    <h1>街のトレードマーク</h1>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-    <div>
-         <!-- ①↓に文字を書いてみよう -->
-あああああああああああ
-12345678
-いいいいいいいい<br>
 
-         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
-画像を表示(30%)<br>
-                    <img src="images/testimage.png" width="30%"><br>
-                    画像を表示(40%)<br>
-                    <img src="images/testimage.png" width="40%"><br>
-                            <img src="images/testimage.png" width="40%"><br>
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>街のトレードマーク</title>
 
-         <!-- ③↓に箇条書きをしてみよう -->
- <ol>
-                        <li>ああああああ</li>
-                        <li>いいいいいい</li>
-                    </ol>
-         <!-- ④↓に外部リンクを作ってみよう -->
+    <style>
+        body {
+            background-color: #f7f5f0;
+            color: #333333;
+            font-family: sans-serif;
+            margin: 0;
+        }
 
-                                    
+        header {
+            text-align: center;
+            background-color: #e8e5dc;
+            padding: 40px 20px;
+        }
 
-    </div>
+        header p {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 10px;
+        }
+
+        .date {
+            color: #777777;
+            font-size: 14px;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #e8e5dc;
+            padding: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>MY PHOTO JOURNAL</p>
+        <h1>街のトレードマーク</h1>
+        <p>旅先で見つけた、街の印象的な風景。</p>
+    </header>
+
+    <main>
+
+        <section>
+          
+
+
+            <p class="date">5月1日｜熱海で友人が撮影</p>
+            <h2>徳造丸</h2>
+                    <img src="images/original-F49CD6C2-E560-41FE-89C7-510587E8FCA3.jpeg"><br>
+
+            <p class="description">
+                熱海駅前平和通り商店街にある「徳造丸」のトレードマーク。
+                アーケードを進むと目の前に現れる、立体的な巨大金目鯛の看板です。
+                伊豆稲取発祥の網元直営店らしいインパクト抜群の店構えで、
+                熱海を訪れる観光客のフォトスポットとしても親しまれています。
+            </p>
+        </section>
+
+        <section>
+            <img src="nikka.jpg" alt="すすきののニッカウイスキーの看板">
+
+            <p class="date">3月16日｜北海道すすきので自分が撮影</p>
+            <h2>ニッカ</h2>
+
+            <p class="description">
+                札幌・すすきののトレードマーク。
+                交差点を見下ろすようにそびえる、ニッカウヰスキーの巨大看板です。
+                3月16日に撮影した4代目デザインの看板。
+                夜の街を彩る、北の歓楽街の象徴的な目印です。
+            </p>
+        </section>
+
+        <section>
+            <img src="sapporo-station.jpg" alt="札幌駅前のTHANK YOUの文字">
+
+            <p class="date">3月16日｜北海道札幌駅前で自分が撮影</p>
+            <h2>THANK YOU</h2>
+
+            <p class="description">
+                札幌駅南口の、今だけのメッセージ。
+                解体工事が進む旧エスタの壁面に現れた「THANK YOU」の巨大文字。
+                長年愛された建物への感謝を伝える、当時限定のアートです。
+                未来の街へとつなぐ、駅前の温かいワンシーン。
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MY PHOTO JOURNAL</p>
+    </footer>
+
+</body>
+</html>
+```
+
+
+</body>
+</html>
 
 </body>
 </html>
